@@ -2,6 +2,12 @@
 
 A modern, responsive React application for managing contacts with a clean, intuitive interface.
 
+## 🚀 Live Demo
+
+**Try the application live:** [https://contacts-tawny-three.vercel.app/](https://contacts-tawny-three.vercel.app/)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/contact-list)
+
 ## Features
 
 ### Core Functionality
