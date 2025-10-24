@@ -18,6 +18,7 @@ export interface ContactFormData {
   email?: string;
   phone?: string;
   company?: string;
+  avatarUrl?: string;
   tags?: string[];
 }
 

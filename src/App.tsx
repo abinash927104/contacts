@@ -24,8 +24,8 @@ const AppContent: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingContact, setEditingContact] = useState<Contact | null>(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<Contact | null>(null);
-  const [sortBy, setSortBy] = useState('fullName:asc');
-  const [page, setPage] = useState(1);
+  const [sortBy] = useState('fullName:asc');
+  const [page] = useState(1);
   const [dismissedErrors, setDismissedErrors] = useState<Set<string>>(new Set());
 
   const { search, debouncedSearch, updateSearch } = useSearch();
@@ -166,7 +166,7 @@ const AppContent: React.FC = () => {
 
       {/* Contact Form Modal */}
       <ContactForm
-        contact={editingContact}
+        contact={editingContact || undefined}
         isOpen={isFormOpen}
         onClose={() => {
           setIsFormOpen(false);

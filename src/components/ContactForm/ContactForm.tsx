@@ -91,7 +91,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   const handleTagsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const tags = value.split(',').map(tag => tag.trim()).filter(tag => tag);
-    setFormData(prev => ({ ...prev, tags }));
+    setFormData(prev => ({ ...prev, tags: tags || [] }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -264,7 +264,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 type="text"
                 id="tags"
                 name="tags"
-                value={formData.tags.join(', ')}
+                value={formData.tags?.join(', ') || ''}
                 onChange={handleTagsChange}
                 className="input-field"
                 placeholder="work, family, friend (comma-separated)"
